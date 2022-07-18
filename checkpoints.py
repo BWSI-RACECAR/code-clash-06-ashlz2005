@@ -40,9 +40,9 @@ class Solution:
                 checkpoints[i + 1] = checkpoints[i]
                 checkpoints[i] = temp
         
-        greatest = 0
-        for i in checkpoints:
-            diff = checkpoints[checkpoints.index(i + 1)] - i
+       greatest = 0
+        for i in range(len(checkpoints) - 1):
+            diff = checkpoints[i + 1] - checkpoints[i]
             if diff > greatest:
                 greatest = diff
         
