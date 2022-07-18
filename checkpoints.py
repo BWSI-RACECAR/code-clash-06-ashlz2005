@@ -34,13 +34,14 @@ class Solution:
         # return type: int
         
         # TODO: Write code below to return an int with the solution to the prompt  
+        greatest = 0
+        
         for i in range(len(checkpoints) - 1):
             while checkpoints[i] > checkpoints[i + 1]:
                 temp = checkpoints[i + 1]
                 checkpoints[i + 1] = checkpoints[i]
                 checkpoints[i] = temp
         
-       greatest = 0
         for i in range(len(checkpoints) - 1):
             diff = checkpoints[i + 1] - checkpoints[i]
             if diff > greatest:
