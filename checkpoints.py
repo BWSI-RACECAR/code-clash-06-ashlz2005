@@ -33,12 +33,12 @@ class Solution:
         # type checkpoints: list
         # return type: int
         
-        # TODO: Write code below to return an int with the solution to the prompt
-        for i in checkpoints:
-            while i > checkpoints[checkpoints.index(i + 1)]:
-                temp = checkpoints[checkpoints.index(i + 1)]
-                checkpoints[checkpoints.index(i + 1)] = i
-                checkpoints[checkpoints.index(i)] = temp
+        # TODO: Write code below to return an int with the solution to the prompt  
+        for i in range(len(checkpoints) - 1):
+            while checkpoints[i] > checkpoints[i + 1]:
+                temp = checkpoints[i + 1]
+                checkpoints[i + 1] = checkpoints[i]
+                checkpoints[i] = temp
         
         greatest = 0
         for i in checkpoints:
